@@ -48,7 +48,7 @@ gulp.task('production', function (done) {
  * Build the Harp Site
  */
 gulp.task('build', function (done) {
-  cp.exec('harp compile . dist', {stdio: 'inherit'})
+  cp.exec('harp compile public dist', {stdio: 'inherit'})
     .on('close', done)
 });
 
