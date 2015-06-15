@@ -9,7 +9,7 @@ var cp          = require('child_process');
  * Serve the Harp Site
  */
 gulp.task('serve', function () {
-  harp.server(__dirname, {
+  harp.server('public', {
     port: 9000
   }, function () {
     browserSync({
