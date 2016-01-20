@@ -1,0 +1,44 @@
+// Typography
+@function font-weight($font-size) {
+  @if $font-size <= em(25px) {
+    @return $weight-regular;
+  } @else {
+    @return $weight-light;
+  }
+}
+
+@function font-leading($font-size) {
+  @if $font-size <= em(30px) {
+    @return 1.3;
+  }
+  @else if $font-size <= em(46px) {
+    @return 1.2;
+  }
+  @else if $font-size <= em(52px) {
+    @return 1.1;
+  }
+  @else {
+    @return 1;
+  }
+}
+
+@function font-tracking($font-size) {
+  @if $font-size <= em(13px) {
+    @return .02em;
+  }
+  @else if $font-size <= em(17px) {
+    @return .01em;
+  }
+  @else if $font-size <= em(21px) {
+    @return .005em;
+  }
+  @else if $font-size <= em(36px) {
+    @return 0em;
+  }
+  @else if $font-size <= em(64px) {
+    @return -.005em;
+  }
+  @else {
+    @return -.01em;
+  }
+}

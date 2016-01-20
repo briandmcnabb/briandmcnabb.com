@@ -1,19 +1,58 @@
+@import "variables";
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "grid-settings";
+@import "../../bower_components/neat/app/assets/stylesheets/neat";
+@import "functions";
+@import "mixins";
+@import "typography";
+
+
 body{
-  font-family: "Helvetica";
-  text-align: center;
-  padding: 50px 20px 0;
-  background-color: #F44336;
-  color: #444;
-  margin: 0;
+  background-color: $red;
+  //background-color: $yellow;
+  //background-color: $teal;
+  color: #FFF;
+  font-family: "RobotoDraft", sans-serif;
+
+  @include pad(0 1em);
+
+  @include media($first) {
+    @include pad(0 2em);
+  }
+
+  // need to fix rendering of visual grid
+  @if $visual-grid == true or $visual-grid == yes {
+    &:before {
+      left:  1em;
+      right: 1em;
+      width: auto;
+
+      @include media($first) {
+        left:  2em;
+        right: 2em;
+      };
+    }
+  }
+}
+
+.wrapper {
+  @include outer-container;
+}
+
+.foo {
+  @include row;
+}
+
+.bar {
+  @include span-columns(4);
+  background-color: $yellow;
+  height: 4em;
+
+  @include media($first) {
+    @include span-columns(8);
+  };
 }
 
 h1{
-  padding: 20px 0;
-  color: #FFF;
-  font-family: 'Roboto Slab', serif;
-  font-size: 6em;
-}
-
-h3{
-  font-weight: 300;
+  @extend .display-1;
 }

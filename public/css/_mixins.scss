@@ -1,0 +1,20 @@
+@mixin heading-font($step, $scale) {
+  $font-size: modular-scale($step, $base-font-size, $scale);
+  font-size: $font-size;
+  font-weight: font-weight($font-size);
+  letter-spacing: font-tracking($font-size);
+  line-height: font-leading($font-size);
+}
+
+
+@mixin responsive-font($scale)  {
+  @include heading-font($scale, $font-scale-sm);
+
+  @include media($first) {
+    @include heading-font($scale, $font-scale-md);
+  }
+
+  @include media($second) {
+    @include heading-font($scale, $font-scale-lg);
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../bower_components/neat/app/assets/stylesheets/neat-helpers";
+
+// Change the grid settings
+$column: 3;
+$gutter: 1;
+$grid-columns: 6;
+$max-width: 160em;
+
+// Define your breakpoints
+$first:  new-breakpoint(min-width  40em 12);
+$second: new-breakpoint(min-width  60em 12);
+$third:  new-breakpoint(min-width  90em 12);
+$fourth: new-breakpoint(min-width 120em 12);

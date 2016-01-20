@@ -1,0 +1,105 @@
+$roboto: 'RobotoDraft', 'Helvetica Neue', Helvetica, Arial;
+$roboto-slab: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial;
+
+$base-font-size: 1em;
+$secondary-font-size: .875em;
+$tiny-font-size: .813em;
+
+$base-line-height: 1.6;
+$base-paragraph-margin: 1.25em;
+
+// Scale
+$font-scale-lg: $major-third;
+$font-scale-md: $minor-third;
+$font-scale-sm: $major-second;
+
+// Steps
+$display-1:  8;
+$display-2:  7;
+$display-3:  6;
+$display-4:  5;
+
+$headline-1: 4;
+$headline-2: 3;
+$headline-3: 2;
+$headline-4: 1;
+
+// Weights
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+
+// Letter Spacing
+// 1000 is equal to 1em
+$base-letter-spacing: 0;
+
+
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $roboto;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: $roboto-slab;
+}
+
+
+
+.display-1  {
+  @include responsive-font($display-1);
+}
+
+.display-2  {
+  @include responsive-font($display-2);
+}
+
+.display-3  {
+  @include responsive-font($display-3);
+}
+
+.display-4  {
+  @include responsive-font($display-4);
+}
+
+.headline-1 {
+  @include responsive-font($headline-1);
+}
+
+.headline-2 {
+  @include responsive-font($headline-2);
+}
+
+.headline-3 {
+  @include responsive-font($headline-3);
+}
+
+.headline-4 {
+  @include responsive-font($headline-4);
+}
+
+p {
+  font-size: 1.25em;
+  font-weight: $weight-regular;
+  letter-spacing: $base-letter-spacing;
+  line-height: $base-line-height;
+  margin: 0;
+
+  & + p {
+    margin-top: $base-paragraph-margin;
+  }
+
+  a.inline {
+    text-decoration: underline;
+  }
+}
