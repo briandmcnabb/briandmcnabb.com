@@ -1,9 +1,9 @@
 @font-face {
   font-family: GoodSans;
-  src: url('../fonts/GoodSans-Regular.eot');
-  src: url('../fonts/GoodSans-Regular.woff2') format('woff2'),
-    url('../fonts/GoodSans-Regular.woff') format('woff'),
-    url('../fonts/GoodSans-Regular.eot?#iefix') format('embedded-opentype');
+  src: url('/fonts/GoodSans-Regular.eot');
+  src: url('/fonts/GoodSans-Regular.woff2') format('woff2'),
+    url('/fonts/GoodSans-Regular.woff') format('woff'),
+    url('/fonts/GoodSans-Regular.eot?#iefix') format('embedded-opentype');
   font-weight: 400;
   font-style: normal;
 }
@@ -11,10 +11,10 @@
 
 @font-face {
   font-family: GoodSans;
-  src: url('../fonts/GoodSans-Light.eot');
-  src: url('../fonts/GoodSans-Light.woff2') format('woff2'),
-    url('../fonts/GoodSans-Light.woff') format('woff'),
-    url('../fonts/GoodSans-Light.eot?#iefix') format('embedded-opentype');
+  src: url('/fonts/GoodSans-Light.eot');
+  src: url('/fonts/GoodSans-Light.woff2') format('woff2'),
+    url('/fonts/GoodSans-Light.woff') format('woff'),
+    url('/fonts/GoodSans-Light.eot?#iefix') format('embedded-opentype');
   font-weight: 200;
   font-style: normal;
 }
